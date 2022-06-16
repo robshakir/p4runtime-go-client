@@ -130,7 +130,7 @@ func main() {
 		"MyIngress.ipv4_lpm",
 		[]client.MatchInterface{&client.LpmMatch{
 			Value: []byte(zero[:]),
-			PLen: 1, 
+			PLen: 0, 
 		}},
 		p4RtC.NewTableActionDirect("MyIngress.drop", nil),
 		nil,
